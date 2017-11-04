@@ -4,7 +4,8 @@ const todos = []
 
 export function createTodo(data) {
   const id = uuid()
-  const todo = { ...data, id }
+  const timestamp = new Date()
+  const todo = { ...data, id, timestamp }
   todos.push(todo)
   return todo
 }
@@ -24,6 +25,7 @@ export function getTodos() {
 export function updateTodo(id, data) {
   const todo = todos.find(x => x.id === id)
   if (!todo) return null
-  Object.assign(todo, data)
+  const timestamp = new Date()
+  Object.assign(todo, data, { id, timestamp })
   return todo
 }
