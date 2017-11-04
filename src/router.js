@@ -1,6 +1,6 @@
 import express from 'express'
 import {
-  addTodo,
+  createTodo,
   deleteTodo,
   getTodos,
   updateTodo,
@@ -14,7 +14,7 @@ router.get('/todos', (req, res) => {
 })
 
 router.post('/todos', (req, res) => {
-  const todo = addTodo(req.body)
+  const todo = createTodo(req.body)
   res.json(todo)
 })
 

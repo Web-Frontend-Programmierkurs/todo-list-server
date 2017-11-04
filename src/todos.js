@@ -2,7 +2,7 @@ import { v4 as uuid } from 'uuid'
 
 const todos = []
 
-export function addTodo(data) {
+export function createTodo(data) {
   const id = uuid()
   const todo = { ...data, id }
   todos.push(todo)
