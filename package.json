@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@babel/core": "^7.0.0-beta.31",
+    "@babel/node": "^7.0.0-beta.31",
+    "@babel/preset-env": "^7.0.0-beta.31",
+    "@babel/preset-stage-3": "^7.0.0-beta.31",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "nodemon": "^1.12.1",
+    "uuid": "^3.1.0"
+  },
+  "scripts": {
+    "start": "nodemon --exec babel-node src/index.js"
+  }
+}
